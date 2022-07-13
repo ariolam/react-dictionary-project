@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
+import Results from "./Results";
 
 export default function SearchEngine() {
   let [keyword, setKeyword] = useState(null);
+  let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
+    setResults(response.data[0]);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -22,6 +24,7 @@ export default function SearchEngine() {
       <form onSubmit={handleSubmit}>
         <input type="search" onChange={updateKeyword} />
       </form>
+      <Results results={results} />
     </div>
   );
 }
