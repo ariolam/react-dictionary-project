@@ -1,3 +1,24 @@
-.SearchEngine {
-  text-align: center;
+.SearchEngine section {
+  background-color: white;
+  padding: 35px;
+  margin: 20px 0;
+  border-radius: 7px;
+  box-shadow: 0 0 30px rgb(0 0 0 / 7%);
+}
+.SearchEngine input {
+  width: 100%;
+  padding: 18px 15px;
+  border-radius: 10px;
+  color: #666;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+.SearchEngine h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.SearchEngine .hint {
+  font-size: 13px;
+  margin-top: 13px;
 }

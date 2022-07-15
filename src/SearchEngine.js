@@ -21,9 +21,13 @@ export default function SearchEngine() {
   }
   return (
     <div className="SearchEngine">
-      <form onSubmit={handleSubmit}>
-        <input type="search" onChange={updateKeyword} />
-      </form>
+      <section>
+        <h1>What word do you want to look up?</h1>
+        <form onSubmit={handleSubmit}>
+          <input type="search" onChange={updateKeyword} />
+        </form>
+        <div className="hint">i.e. sea, wine, coding, umbrella</div>
+      </section>
       <Results results={results} />
     </div>
   );
